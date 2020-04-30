@@ -1,0 +1,36 @@
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <h3>Please provide your details</h3>
+                <span class="input-text-wrapper">
+                    <label>
+                        <input type="text" formControlName="firstName" required placeholder="First Name">
+                    </label>
+                </span>
+                <span class="input-text-wrapper">
+                    <label>
+                        <input type="text" formControlName="lastName" placeholder="Last Name">
+                    </label>
+                </span>
+                <span class="input-text-wrapper">
+                    <label>
+                        <input type="text" formControlName="email" placeholder="Email Address">
+                    </label>
+                </span>
+                <span class="input-text-wrapper">
+                    <label>
+                        <input type="text" formControlName="country" placeholder="Country Code">
+                    </label>
+                </span>
+                <span class="input-text-wrapper">
+                    <label>
+                        <input type="text" formControlName="description"
+                            placeholder="Brief Description of your legal issue. ">
+                    </label>
+                </span>
+                <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
